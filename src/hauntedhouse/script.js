@@ -15,13 +15,54 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+// Textures 
+const textureLoader = new THREE.TextureLoader()
+
+// Floor 
+const floorAlphaTexture = textureLoader.load('./static/floor/alpha.jpg')
+const floorColorTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_diff_1k.jpg')
+const floorARMTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_arm_1k.jpg')
+const floorNormalTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_nor_gl_1k.jpg')
+const floorDisplacementTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_disp_1k.jpg')
+
+floorColorTexture.colorSpace = THREE.SRGBColorSpace 
+
+// Three.js repeat wrapping 
+
+floorColorTexture.repeat.set(8, 8)
+floorARMTexture.repeat.set(8, 8)
+floorNormalTexture.repeat.set(8, 8)
+floorDisplacementTexture.repeat.set(8, 8)
+
+floorColorTexture.wrapS = THREE.RepeatWrapping
+floorARMTexture.wrapS = THREE.RepeatWrapping
+floorNormalTexture.wrapS = THREE.RepeatWrapping
+floorDisplacementTexture.wrapS = THREE.RepeatWrapping
+
+floorColorTexture.wrapT = THREE.RepeatWrapping
+floorARMTexture.wrapT = THREE.RepeatWrapping
+floorNormalTexture.wrapT = THREE.RepeatWrapping
+floorDisplacementTexture.wrapT = THREE.RepeatWrapping
+
 // Floor 
 const floor = new THREE.Mesh(
-    new THREE.PlaneGeometry(20,20 ),
-    new THREE.MeshStandardMaterial()
+    new THREE.PlaneGeometry(20,20, 100, 100 ),
+    new THREE.MeshStandardMaterial({
+        alphaMap: floorAlphaTexture,
+        transparent: true,
+        map: floorColorTexture,
+        aoMap: floorARMTexture,
+        roughnessMap: floorARMTexture,
+        metalnessMap: floorARMTexture,
+        normalMap: floorNormalTexture,
+        displacementMap: floorDisplacementTexture,
+        displacementScale: 0.233,
+        displacementBias: 0.055,
+    })
 )
 floor.rotation.x = - Math.PI * 0.5
 scene.add(floor);
+
 
 // House container 
 const house = new THREE.Group();
@@ -79,6 +120,27 @@ house.add(bush1,bush2,bush3,bush4)
 const graveGeo = new THREE.BoxGeometry(0.6, 0.8, 0.2)
 const graveMat = new THREE.MeshStandardMaterial()
 
+const graves = new THREE.Group();
+scene.add(graves)
+
+for(let i=0; i < 30; i++){
+
+    // Coordinates 
+    const angle = Math.random() * Math.PI * 2;
+    const radius = 3 + Math.random() * 4
+    const x = Math.sin(angle) * radius
+    const z = Math.cos(angle) * radius
+
+    const grave = new THREE.Mesh(graveGeo,graveMat)
+    grave.position.x = x
+    grave.position.y = Math.random() * 0.4
+    grave.position.z = z
+
+    grave.rotation.x = (Math.random() - 0.5) * 0.4
+    grave.rotation.y = (Math.random() - 0.5) * 0.4
+    grave.rotation.z = (Math.random() - 0.5) * 0.4
+    graves.add(grave);
+}
 
 /**
  * Lights
