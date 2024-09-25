@@ -7,7 +7,7 @@ import { Sky } from 'three/addons/objects/Sky.js'
  * Base
  */
 // Debug
-const gui = new GUI()
+
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -19,11 +19,11 @@ const scene = new THREE.Scene()
 const textureLoader = new THREE.TextureLoader()
 
 // Floor 
-const floorAlphaTexture = textureLoader.load('./static/floor/alpha.jpg')
-const floorColorTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_1k/coast_sand_rocks_02_diff_1k.jpg')
-const floorARMTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_1k/coast_sand_rocks_02_arm_1k.jpg')
-const floorNormalTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_1k/coast_sand_rocks_02_nor_gl_1k.jpg')
-const floorDisplacementTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_1k/coast_sand_rocks_02_disp_1k.jpg')
+const floorAlphaTexture = textureLoader.load('./static/floor/alpha.webp')
+const floorColorTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_1k/coast_sand_rocks_02_diff_1k.webp')
+const floorARMTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_1k/coast_sand_rocks_02_arm_1k.webp')
+const floorNormalTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_1k/coast_sand_rocks_02_nor_gl_1k.webp')
+const floorDisplacementTexture = textureLoader.load('./static/floor/coast_sand_rocks_02_1k/coast_sand_rocks_02_disp_1k.webp')
 
 floorColorTexture.colorSpace = THREE.SRGBColorSpace 
 
@@ -64,9 +64,9 @@ floor.rotation.x = - Math.PI * 0.5
 scene.add(floor);
 
 // Walls 
-const wallColorTexture = textureLoader.load('./static/wall/castle_brick_broken_06_1k/castle_brick_broken_06_diff_1k.jpg')
-const wallARMTexture = textureLoader.load('./static/wall/castle_brick_broken_06_1k/castle_brick_broken_06_arm_1k.jpg')
-const wallNormalTexture = textureLoader.load('./static/wall/castle_brick_broken_06_1k/castle_brick_broken_06_nor_gl_1k.jpg')
+const wallColorTexture = textureLoader.load('./static/wall/castle_brick_broken_06_1k/castle_brick_broken_06_diff_1k.webp')
+const wallARMTexture = textureLoader.load('./static/wall/castle_brick_broken_06_1k/castle_brick_broken_06_arm_1k.webp')
+const wallNormalTexture = textureLoader.load('./static/wall/castle_brick_broken_06_1k/castle_brick_broken_06_nor_gl_1k.webp')
 // set the color 
 wallColorTexture.colorSpace = THREE.SRGBColorSpace
 
@@ -90,9 +90,9 @@ house.add(walls)
 
 // Roof 
 
-const roofColorTexture = textureLoader.load('./static/roof/roof_slates_02_1k/roof_slates_02_diff_1k.jpg')
-const roofARMTexture = textureLoader.load('./static/roof/roof_slates_02_1k/roof_slates_02_arm_1k.jpg')
-const roofNormalTexture = textureLoader.load('./static/roof/roof_slates_02_1k/roof_slates_02_nor_gl_1k.jpg')
+const roofColorTexture = textureLoader.load('./static/roof/roof_slates_02_1k/roof_slates_02_diff_1k.webp')
+const roofARMTexture = textureLoader.load('./static/roof/roof_slates_02_1k/roof_slates_02_arm_1k.webp')
+const roofNormalTexture = textureLoader.load('./static/roof/roof_slates_02_1k/roof_slates_02_nor_gl_1k.webp')
 
 roofColorTexture.repeat.set(3, 1)
 roofARMTexture.repeat.set(3, 1)
@@ -228,9 +228,9 @@ house.add(bush1,bush2,bush3,bush4)
 // Graves 
 
 // Grave
-const graveColorTexture = textureLoader.load('./static/grave/plastered_stone_wall_1k/plastered_stone_wall_diff_1k.jpg')
-const graveARMTexture = textureLoader.load('./static/grave/plastered_stone_wall_1k/plastered_stone_wall_arm_1k.jpg')
-const graveNormalTexture = textureLoader.load('./static/grave/plastered_stone_wall_1k/plastered_stone_wall_nor_gl_1k.jpg')
+const graveColorTexture = textureLoader.load('./static/grave/plastered_stone_wall_1k/plastered_stone_wall_diff_1k.webp')
+const graveARMTexture = textureLoader.load('./static/grave/plastered_stone_wall_1k/plastered_stone_wall_arm_1k.webp')
+const graveNormalTexture = textureLoader.load('./static/grave/plastered_stone_wall_1k/plastered_stone_wall_nor_gl_1k.webp')
 
 graveColorTexture.colorSpace = THREE.SRGBColorSpace
 
