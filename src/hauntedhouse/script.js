@@ -1,8 +1,8 @@
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import { Timer } from 'three/addons/misc/Timer.js'
-import GUI from 'lil-gui'
-import { Sky } from 'three/addons/objects/Sky.js'
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { Timer } from 'three/addons/misc/Timer.js';
+import { Sky } from 'three/addons/objects/Sky.js';
+
 /**
  * Base
  */
@@ -63,6 +63,11 @@ const floor = new THREE.Mesh(
 floor.rotation.x = - Math.PI * 0.5
 scene.add(floor);
 
+
+// House container 
+const house = new THREE.Group();
+scene.add(house)
+
 // Walls 
 const wallColorTexture = textureLoader.load('./static/wall/castle_brick_broken_06_1k/castle_brick_broken_06_diff_1k.webp')
 const wallARMTexture = textureLoader.load('./static/wall/castle_brick_broken_06_1k/castle_brick_broken_06_arm_1k.webp')
@@ -70,9 +75,6 @@ const wallNormalTexture = textureLoader.load('./static/wall/castle_brick_broken_
 // set the color 
 wallColorTexture.colorSpace = THREE.SRGBColorSpace
 
-// House container 
-const house = new THREE.Group();
-scene.add(house)
 
 // Walls 
 const walls = new THREE.Mesh(
