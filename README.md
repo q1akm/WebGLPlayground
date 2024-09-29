@@ -1,25 +1,43 @@
 # WebGLPlayground
+A playground for showcasing and experimenting with 3D graphics directly in the browser. This project features shaders, interactive scenes, and custom 3D environments.
 
-<a href="src/shader001.html">Shader 001<a/>
-<a href="/src/shader002/shader002.html">Shader 002<a/>
-<a href="src/hauntedhouse">Haunted House<a/>
+# Available Scenes
 
-![WebGLPlayground - Google Chrome 9_26_2024 12_03_09 AM](https://github.com/user-attachments/assets/60acd365-7822-4220-a63c-680fa0e595a2)
+Shader 001: A customizable shader demonstrating basic shading techniques.
+<br/>
+Shader 002: A more advanced shader exploring lighting and texture mapping.
+<br/>
+Haunted House: An interactive 3D environment showcasing a haunted house, with lighting and shadow effects.
 
-## Installation
+Getting Started
+Clone the repository:
 
-Clone this repo and npm install.
+```bash
+git clone https://github.com/q1akm/WebGLPlayground.git
+```
+Navigate into the project directory:
+
+``` bash
+cd WebGLPlayground
+```
+Install dependencies:
 
 ```bash
 npm install
 ```
+Start the development server:
 
-## Usage
-
-### Development server
-
-```bash
+``` bash
 npm run dev
 ```
+Open the project: 
+<br/>
+After the server starts, open your browser and go to:
 
-You can view the development server at `localhost:5173`.
+```arduino
+http://localhost:5173
+```
+Start playing:
+<br/>
+Explore the different scenes, experiment with shaders, and interact with 3D environments.
+![WebGLPlayground - Google Chrome 9_26_2024 12_03_09 AM](https://github.com/user-attachments/assets/60acd365-7822-4220-a63c-680fa0e595a2)
