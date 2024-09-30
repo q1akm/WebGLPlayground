@@ -3,11 +3,11 @@ A playground for showcasing and experimenting with 3D graphics directly in the b
 
 # Available Scenes
 
-Shader 001: A customizable shader demonstrating basic shading techniques.
+<a href="src/shader001/index.html">Shader 001<a/>: A customizable shader demonstrating basic shading techniques.
 <br/>
-Shader 002: A more advanced shader exploring lighting and texture mapping.
+<a href="src/shader002/shader002.html">Shader 002<a/>: A more advanced shader exploring lighting and texture mapping.
 <br/>
-Haunted House: An interactive 3D environment showcasing a haunted house, with lighting and shadow effects.
+<a href="src/hauntedhouse/index.html">Haunted House<a/>: An interactive 3D environment showcasing a haunted house, with lighting and shadow effects.
 
 Getting Started
 Clone the repository:
