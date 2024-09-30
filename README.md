@@ -8,6 +8,7 @@ A playground for showcasing and experimenting with 3D graphics directly in the b
 <a href="src/shader002/shader002.html">Shader 002<a/>: A more advanced shader exploring lighting and texture mapping.
 <br/>
 <a href="src/hauntedhouse/index.html">Haunted House<a/>: An interactive 3D environment showcasing a haunted house, with lighting and shadow effects.
+![WebGLPlayground - Google Chrome 9_26_2024 12_03_09 AM](https://github.com/user-attachments/assets/60acd365-7822-4220-a63c-680fa0e595a2)
 
 Getting Started
 Clone the repository:
@@ -40,4 +41,3 @@ http://localhost:5173
 Start playing:
 <br/>
 Explore the different scenes, experiment with shaders, and interact with 3D environments.
-![WebGLPlayground - Google Chrome 9_26_2024 12_03_09 AM](https://github.com/user-attachments/assets/60acd365-7822-4220-a63c-680fa0e595a2)
