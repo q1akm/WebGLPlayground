@@ -41,3 +41,6 @@ http://localhost:5173
 Start playing:
 <br/>
 Explore the different scenes, experiment with shaders, and interact with 3D environments.
+
+# Give it a Star! ⭐
+If you found this project helpful or inspiring, make sure to give it a star on GitHub! Your support means a lot and helps the project grow.
